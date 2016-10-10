@@ -1,0 +1,59 @@
+html, head, body, footer  {
+background-color: #F9F9F9;
+color: black;
+}
+.weather-column{
+background-color: white;
+color: black;
+}
+.typahead {
+text-align: center;
+ margin-top: 70px;
+width: auto;
+height: auto;
+
+}
+
+#weather-picture {
+width: 15%;
+height: 15%;
+margin: 30px 0;
+}
+
+p {
+margin: 120px auto;
+}
+
+.display-1 {
+  margin: 60px 200px auto auto;
+  text-align: center;
+}
+
+
+input{
+text-align: center;
+width: 400px;
+}
+
+.end-of-page {
+text-align: center;
+padding-top: 20%;
+}
+
+.weather-column, li {
+  border: 2px solid black;
+}
+
+#copy-right {
+filter: drop-shadow(0 0 1px #b3d1ff);
+}
+
+
+li {
+width: 350px;
+height: 200px;
+list-style: none;
+}
+canvas {
+vertical-align: middle;
+}
