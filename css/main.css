@@ -11,6 +11,8 @@ text-align: center;
  margin-top: 70px;
 width: auto;
 height: auto;
+margin-bottom: 65px;
+display: inline-grid;
 
 }
 
@@ -40,8 +42,8 @@ text-align: center;
 padding-top: 20%;
 }
 
-.weather-column, li {
-  border: 2px solid black;
+.weather-column, .liWeather {
+  border: 1px solid black;
 }
 
 #copy-right {
@@ -49,11 +51,41 @@ filter: drop-shadow(0 0 1px #b3d1ff);
 }
 
 
-li {
+.liWeather {
 width: 350px;
 height: 200px;
 list-style: none;
 }
-canvas {
-vertical-align: middle;
+
+li {
+  border: 1px solid black;
+}
+
+#submit {
+  margin-right: -77px;
+  border-radius: 15px;
+}
+
+
+#yr-divdiv {
+ background: linear-gradient(to bottom,#80d4ff ,#F9F9F9 );
+ border-radius: 20px;
+}
+
+#owm-div {
+background: linear-gradient(to bottom, #ffa500,#F9F9F9 );
+border-radius: 20px;
+}
+
+.owmen {
+color: black;
+margin: 15px 0 0 15px
+}
+.yren{
+color: white;
+margin: 15px 0 0 15px;
+}
+
+h5 {
+margin: 10px 0 0 10px;
 }

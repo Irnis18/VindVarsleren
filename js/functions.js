@@ -1,3 +1,6 @@
+/*********************************************************************************
+Api-Openweather - This is the function for the openweathermap api.
+**********************************************************************************/
 function weatherAsk(event){
   var apiUrl = "http://api.openweathermap.org/data/2.5/forecast/daily";
   var apiKey="569cb5c54488af8f488e82b8dd9ca105";
@@ -33,15 +36,32 @@ function weatherAsk(event){
   });
 }
 
-
-
 $(document).ready(function(){
   $(".typahead").submit(weatherAsk);
+
 });
 
-
-
-//
-// $('owmTodayWeather').first().html(weather.main.temp);
-// $(".typahead").submit(weatherAsk);
-// });
+/*********************************************************************************
+This is the function for the autocomplete typahead.
+**********************************************************************************/
+$(function ()
+ {
+     $("#city").autocomplete({
+        source: function (request, response) {
+         $.getJSON(
+            "http://gd.geobytes.com/AutoCompleteCity?callback=?&q="+request.term,
+            function (data) {
+              small_data = data.slice(0, 3);
+             response(small_data);
+            }
+         );
+        },
+        minLength: 3,
+        select: function (event, ui) {
+         var selectedObj = ui.item;
+         $("#city").val(selectedObj.value);
+         return false;
+        }
+     });
+     $("#city").autocomplete("option", "delay", 100);
+    });
