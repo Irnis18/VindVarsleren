@@ -1,7 +1,8 @@
-html, head, body, footer  {
-background-color: #F9F9F9;
+html, head, body  {
+background: linear-gradient(to bottom,#F9F9F9, white );
 color: black;
 }
+
 .weather-column{
 background-color: white;
 color: black;
@@ -68,12 +69,12 @@ li {
 
 
 #yr-divdiv {
- background: linear-gradient(to bottom,#80d4ff ,#F9F9F9 );
+ background: linear-gradient(to bottom,#80d4ff ,white );
  border-radius: 20px;
 }
 
 #owm-div {
-background: linear-gradient(to bottom, #ffa500,#F9F9F9 );
+background: linear-gradient(to bottom, #ffa500,white );
 border-radius: 20px;
 }
 
