@@ -23,11 +23,54 @@ function weatherAsk(event){
     owmTomorrowDataWeatherIcon = $("#owm-tomorrow-weather > .weather-icon-data").attr("src", 'http://openweathermap.org/img/w/' + data.list[1].weather[0].icon + ".png");
     owmInSevenDaysDataWeatherIcon = $("#owm-seven-days-weather > .weather-icon-data").attr("src", 'http://openweathermap.org/img/w/' + data.list[6].weather[0].icon + ".png");
 
+//Div for the weather today - Openweathermap
 
-// What is going to be displayed in div, todays weather, tomorrows weather and the weather in seven days.
-    todayWeatherString = "The weather is " + data.list[0].weather[0].main + "<br/>" +"Average temperature is: " + data.list[0].temp.day + "°C" + "<br/>" + "Pressure: " + data.list[0].pressure + " hpa"  + "<br/>" + "Cloudiness: " + data.list[0].weather[0].description;
-    tomorrowWeatherString = "The weather is " + data.list[1].weather[0].main + "<br/>" + "Average temperature is: " + data.list[1].temp.day + "°C" + "<br/>" + "Pressure: " + data.list[1].pressure + " hpa" +  "<br/>" + "Cloudiness: " + data.list[1].weather[0].description;
-    inSevenDaysWeather = "The weather is " + data.list[6].weather[0].main + "<br/>" + "Average temperature is: " + data.list[6].temp.day + "°C" + "<br/>" + "Pressure: " + data.list[6].pressure + " hpa" + "<br/>" +"Cloudiness: " + data.list[6].weather[0].description;
+    todayWeatherString = "The weather is " ;
+    todayWeatherString += data.list[0].weather[0].main;
+    todayWeatherString += "<br/>";
+    todayWeatherString += "Average temperature is: ";
+    todayWeatherString += data.list[0].temp.day;
+    todayWeatherString += "°C";
+    todayWeatherString += "<br/>" ;
+    todayWeatherString += "Pressure: ";
+    todayWeatherString += data.list[0].pressure;
+    todayWeatherString += " hpa";
+    todayWeatherString += "<br/>";
+    todayWeatherString += "Cloudiness: ";
+    todayWeatherString += data.list[0].weather[0].description;
+
+    // Div for the weather tomorrow  - Openweathermap
+
+
+    tomorrowWeatherString = "The weather is ";
+    tomorrowWeatherString += data.list[1].weather[0].main;
+    tomorrowWeatherString += "<br/>" ;
+    tomorrowWeatherString += "Average temperature is: ";
+    tomorrowWeatherString += data.list[1].temp.day;
+    tomorrowWeatherString += "°C" ;
+    tomorrowWeatherString += "<br/>" ;
+    tomorrowWeatherString += "Pressure: " ;
+    tomorrowWeatherString += data.list[1].pressure;
+    tomorrowWeatherString += " hpa" ;
+    tomorrowWeatherString +=  "<br/>";
+    tomorrowWeatherString += "Cloudiness: ";
+    tomorrowWeatherString += data.list[1].weather[0].description;
+
+// Div for the weather in 7 days - Openweathermap
+
+    inSevenDaysWeather = "The weather is ";
+    inSevenDaysWeather += data.list[6].weather[0].main;
+    inSevenDaysWeather += "<br/>";
+    inSevenDaysWeather += "Average temperature is: ";
+    inSevenDaysWeather += data.list[6].temp.day;
+    inSevenDaysWeather += "°C";
+    inSevenDaysWeather += "<br/>";
+    inSevenDaysWeather += "Pressure: " ;
+    inSevenDaysWeather += data.list[6].pressure;
+    inSevenDaysWeather += " hpa" ;
+    inSevenDaysWeather += "<br/>" ;
+    inSevenDaysWeather += "Cloudiness: ";
+    inSevenDaysWeather += data.list[6].weather[0].description;
 
 
 //Displaying the icon and the text using jquerry
@@ -72,5 +115,5 @@ $(function ()
      });
      $("#city").autocomplete("option", "delay", 100);
     });
-    xhr.open("GET", "index.html");
-    xhr.send();
+    // xhr.open("GET", "index.html");
+    // xhr.send();
