@@ -1,101 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" class="container">
-    <head>
 
-<!-- Required meta tags always come first -->
-        <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-            <meta http-equiv="x-ua-compatible" content="ie=edge">
-              <title>Weatherman</title>
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Vind Varsleren</title>
+    <!-- Bootstrap CSS -->
+    <link href="css/main.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js"></script>
+</head>
 
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/themes/flick/jquery-ui.css" />
-          <link href="css/normalize.css" rel="stylesheet">
-            <link href="css/bootstrap.css" rel="stylesheet">
-              <link href="css/bootstrap-theme.css" rel="stylesheet">
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
-                  <link href="css/main.css" rel="stylesheet">
-
-                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-                  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-                  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
-                  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js"></script>
-      </head>
-
-<!-- Title and a little paragraph -->
-
-<body class="container">
-  <div class="container text-xs-center" >
-    <img id="weather-picture" src="img/weather.png" class="circle-rounded pull-xs-left media-object" alt="...">
-      <h1 class="display-1 container-fluid media">The WeatherMan</h1>
-        <p class="lead">
-          Hello! Welcome to The Weatherman's page. This is a page were you can see the weather. we are comparing the results from Yr.no and OpenWeather.org. we have worked on this site for 17 years, we made it possible to compare these two results and to see wich of the results are the best. we are a local working firm that works with weather. our passion is weather and we have 50 years experience within us. we know everything about the weather. this is the most trusted site you can find about weather.
-        </p>
-  </div>
-
-<!-- dropdown menu with search bar -->
-<form class="typahead">
-  <input id="city" type="text" data-provide="typahead" value="" placeholder="--Your location!--">
-    <button id="submit" name="name" value="value" type="submit">Search</button>
-</form>
-
-<!-- Information about the weahter  -->
-<div class="container p-t-3 text-md-left" id="yr-owm-div">
-  <div class="row">
-    <div class="col-md-5 weather-column" id="yr-divdiv">
-        <h2 class="m-b-2 yren">YR</h2>
-            <ul id="yr-div">
-              <li id="yr-today-weather" class="liWeather">
-                <h5>Today's weather:</h5>
-                <img src="" class="weather-icon-data" alt="" />
-                <span class="text"></span>
-              </li>
-              <li id="yr-tomorrow-weather" class="liWeather">
-                <h5>Tomorrow's weather:</h5>
-                <img src="" class="weather-icon-data" alt="" />
-                <span class="text"></span>
-              </li>
-              <li id="yr-seven-days-weather" class="liWeather">
-                <h5>The weather in seven days:</h5>
-                <img src="" class="weather-icon-data" alt="" />
-                <span class="text"></span>
-              </li>
-            </ul>
+<body>
+    <div>
+        <h2 class="main-title regular">Måløy</h2>
+        <h3 id="brua" class="second-title-åpen"></h3>
+        <h1 class="second-title regular"></h1>
+        <h2 class="second-title-2 regular">m/s</h2>
     </div>
-      <div class="col-md-2"></div>
-      <div class="col-md-5 weather-column" id="owm-div">
-        <h2 class="m-b-2 owmen">OWM</h2>
-          <ul id="openweathermap-div">
-            <li id="owm-today-weather" class="liWeather">
-              <h5>Today's weather:</h5>
-              <img src="" class="weather-icon-data" alt="" />
-              <span class="text"></span>
-            </li>
-            <li id="owm-tomorrow-weather" class="liWeather">
-              <h5>Tomorrow's weather:</h5>
-              <img src="" class="weather-icon-data" alt=""/>
-              <span class="text"></span>
-            </li>
-            <li id="owm-seven-days-weather" class="liWeather">
-              <h5>The weather in seven days:</h5>
-              <img src="" class="weather-icon-data" alt=""/>
-              <span class="text"></span>
-            </li>
-          </ul>
-    </div>
-  </div>
-</div>
-
-<!-- Api json, and displaing the weather on the different days and places -->
-
-
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
-
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type='text/javascript' src="js/config.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
     <script src="js/bootstrap.js"></script>
-      <footer class="end-of-page">
-        <p id="copy-right">&copy; 2016 TheWeatherMan.com<p>
-      </footer>
-  </body>
+</body>
+
 </html>
